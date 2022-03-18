@@ -276,15 +276,26 @@
 	}
 	setInterval(actualisationVariables, 10);
 
-	function showAlert(){
+/// Fin
+	
+	function Gagné(){
 		alert("YOU WIN !!");
 	}
+	function Perdu(){
+		alert("GAME OVER")
+	}
 	function fin(){
-		if(score == 1250){
-			showAlert();
+		if(score == 760){
+			Gagné();
 		}
 	}
-	setInterval(fin, 100);
+	function fin2(){
+		if (map[fantome.y][fantome.x] === map[pacman.y][pacman.x]){
+			Perdu();
+		}
+	}
+	setInterval(fin, 100);	
+	setInterval(fin2, 100);
 
 </script>
 </html>
